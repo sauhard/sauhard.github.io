@@ -5,7 +5,21 @@
 	<link rel="stylesheet" type="text/css" href="stylesheet.css" />
 </head>
 
-<body>
+<body ng-app="canvas" ng-controller="mainCtlr">
+    <div id="help-overlay">
+        <div class="content">
+            <p>
+                <span class="help-heading">QUICK GUIDE</span><br>
+                (<span>press h</span> to open again later)<br><br>
+                <span>Click anywhere</span> to start drawing.<br>
+                <span>Click on a cell</span> to color it. Click and <span>drag</span> over multiple cells to color them all!<br>
+                Alternatively, you can press <span>spacebar</span> to toggle drawing by just hovering.<br>
+                You can toggle various settings from the menu on the right.<br>
+                Feel free to play around with it; everything can be toggled back (EXCEPT CLEAR)!
+            </p>
+        </div>
+    </div>
+    
 	<div id="rightbar">
 		<div class="btn" id="cells">Cells</div>
 		<div class="btn" id="height">Height</div>
@@ -15,7 +29,7 @@
 		<!-- <div class="btn" id="nine">3 x 3</div> -->
 		<div id="show">Hide</div>
 		<div id="menu"></div>
-		<div id="jlj">Sauhard Gupta</div>
+		<div id="author">Sauhard Gupta</div>
 	</div>
 	<div id="canvas">
 		<table>

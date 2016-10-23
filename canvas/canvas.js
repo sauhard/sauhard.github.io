@@ -1,14 +1,17 @@
 $(document).ready(function() {
 	var f = 1, color = "orange";
-    var isDragging = false;
-    $("#canvas")
-    .mousedown(function() {
-        isDragging = true;
-    })
-    .mouseup(function() {
-        var wasDragging = isDragging;
-        isDragging = false;
-    });
+	var isDragging = false;
+	$("#help-overlay").mousedown(function() {
+		$(this).fadeOut();
+	});
+	$("#canvas")
+	.mousedown(function() {
+		isDragging = true;
+	})
+	.mouseup(function() {
+		var wasDragging = isDragging;
+		isDragging = false;
+	});
 	$("td").mouseenter(function() {
         if (isDragging) {
             if (color=="orange") {
@@ -22,22 +25,25 @@ $(document).ready(function() {
             }
         }
 	});
-    $("td").mousedown(function() {
-        if (color=="orange") {
-			$(this).removeClass("red blue").toggleClass("orange");
-		}
-		if (color=="red") {
-			$(this).removeClass("orange blue").toggleClass("red");
-		}
-		if (color=="blue") {
-			$(this).removeClass("orange red").toggleClass("blue");
-		}
-    });
-    $(document).keydown(function(evt) {
+	$("td").mousedown(function() {
+		if (color=="orange") {
+		$(this).removeClass("red blue").toggleClass("orange");
+	}
+	if (color=="red") {
+		$(this).removeClass("orange blue").toggleClass("red");
+	}
+	if (color=="blue") {
+		$(this).removeClass("orange red").toggleClass("blue");
+	}
+	});
+	$(document).keydown(function(evt) {
         if (evt.keyCode == 32) {
-          isDragging = !isDragging;
+            isDragging = !isDragging;
         }
-      });
+        if (evt.keyCode==72||evt.keyCode==104) {
+            $("#help-overlay").fadeIn();
+        }
+		});
 	$("div#cells").click(function() {
 		$("td").toggleClass("cells");
 	});
