@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+    overflow: hidden;
 }
 
 table {
@@ -61,15 +62,15 @@ table {
 	z-index: 2;
 }
 
-#canvas {
-	padding: 20px;
+#canvas table {
+    border: 2px solid #EEE;
 }
 
 td {
 	height: 10px;
 	width: 8px;
-	border-radius: 4px;
-	background-color: #DDD;
+/*	border-radius: 4px;*/
+	background-color: #F4F4F4;
 	user-drag: none;
 	-webkit-user-drag: none;
 }
@@ -91,13 +92,13 @@ td:hover {
 }
 
 .cells {
-	border-radius: 0 !important;
+	border-radius: 3px !important;
 }
 .height {
 	height: 16px !important;
 }
 .width {
-	width: 16px !important;
+	width: 24px !important;
 }
 
 div.btn {

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function() {  
 	var f = 1, color = "orange";
 	var isDragging = false;
 	$("#help-overlay").mousedown(function() {
